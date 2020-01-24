@@ -280,11 +280,129 @@ __Contracts Limitation__
 
 ![First Smart Contract](./82.png)
 
+We will use Remix as IDE online.
 
+https://remix.ethereum.org/
 
+![Remix IDE online](./83.jpg)
 
+We delete the two examples and will create our Helloworld.sol
 
+```solidity
+pragma solidity ^0.4.0;
 
+contract HelloWorld {
+    string public message;
+    
+    function seetMessage(string newMessage) public {
+        message = newMessage;
+    }
+}
+```
+Entering in Solidity Environment, check 0.4.25 versión of the compiler and compile it
+
+![Compilation](./84.jpg)
+
+Clicking on Compilation Details
+
+![Compilation Details](./85.jpg)
+
+We can run the program clicking on the icon "Run and deploy transactions"
+
+![Run and deploy transactions](./86.jpg)
+
+We choose:
+
+- Environment: Javascript VM, Injected Web 3 or Web3 provider
+- Account: different accounts to execute a transaction
+- Gas limit: gas that are willing to pay executing deploying the smart contract
+- Value: amount of ether we want to send with a transaction
+
+Clicking on deploy
+
+![Deployed](./87.jpg)
+
+And we can test our contract
+
+![Testing our contract](./88.jpg)
+
+## 3.7 Paying for Computation
+
+![Paying for Computation](./89.jpg)
+
+![Gas](./90.jpg)
+
+![Estimation Gast](./91.jpg)
+
+![Gas and Refund](./92.jpg)
+
+![Ethereum Node Types](./93.jpg)
+
+![Ethereum Denominations](./94.jpg)
+
+## 3.8 Transactions and Calls
+
+![Transactions and calls](./95.jpg)
+
+![Function modifiers](./96.jpg)
+
+Se usa "pure" para indicar explicitamente que la función no modifica ningún estado
+
+## 3.9 Removing Contracts
+
+![Deploying Contract with Remix](./97.jpg)
+
+![Removing Contracts](./98.jpg)
+
+![Selfdestruct](./99.jpg)
+
+![Using Metamask](./100.jpg)
+
+Metamask uses Infura to access the Ethereum Network indirectly by default or could be access directly to a Ethereum node passing its address.
+
+## 3.10 Deploying Smart Contracts
+
+![Demo](./101.jpg)
+
+We will create a new function called remove (is not secure, because all people could call it, we will view how to secure the calling of function methods)
+
+```
+pragma solidity ^0.4.0;
+
+contract HelloWorld {
+    string public message;
+    
+    function setMessage(string newMessage) public {
+        message = newMessage;
+    }
+    
+    function remove() public {
+        selfdestruct(0x0);
+    }
+}
+```
+
+Compile it, and then select Injected Web3, specifing the environment as Injected Web3 (if we are using metamask, the remix will connet with it)
+
+![Setting the environment](./102.jpg)
+
+Our main account in metamaks must be shown by default, indicating our funds.
+
+Now, we click on Deploy button to deploy the smart contract. Then will appear the next metamask popup
+
+![Metamask popup](./103.jpg)
+
+Click the "Confirm" button and then, the contract will be deployed
+
+![Contract deployed shown in Remix](./104.jpg)
+
+And in Metamask
+
+![Contract pending shown in Metamask](./105.jpg)
+
+We finally need to click the confirm on Metamask, and then we will obtain the smart contract deployed OK.
+
+![Contract deployed shown in Metamask](./106.jpg)
 
 
 
