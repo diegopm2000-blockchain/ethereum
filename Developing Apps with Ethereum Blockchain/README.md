@@ -404,6 +404,25 @@ We finally need to click the confirm on Metamask, and then we will obtain the sm
 
 ![Contract deployed shown in Metamask](./106.jpg)
 
+We can access to the information of the transaction clicking on the upper right button near the arrow
 
+![Transaction Information](./107.jpg)
 
+0xfa87ea039f17d89e73fe62b984f30535bf33ba72f1d7cb2ace5f72a1e018d276
+
+Executing a transaction after the smart contract has been deployed on Rinkeby
+
+![Execution of Smart Contract Function](./108.jpg)
+
+![Transaction Information](./109.jpg)
+
+Using Etherscan for more info (click on arrow button near the Transaction ID viewer button)
+
+![Etherscan Transaction Information](./110.jpg)
+
+Removing the contract from Rinkeby
+
+![Removing Contract](./111.jpg)
+
+# 4. Solidity Programming Language
 
